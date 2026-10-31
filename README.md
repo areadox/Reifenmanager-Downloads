@@ -44,7 +44,9 @@ Dort liegen zwei Dateien:
 - **Community-Version:** kostenlos, bis zu **100 Lagerplätze**.
 - **Firmenlizenz:** für mehr Plätze. Du erhältst einen Lizenzschlüssel und trägst ihn im Programmfenster unter
   **„Lizenz eintragen"** (oder in der Weboberfläche unter **Lizenz**) ein. Danach gilt die lizenzierte Platzanzahl.
-- Läuft eine befristete Lizenz ab, bleiben alle Daten erhalten; neue Einlagerungen sind dann nur noch im Rahmen der Community-Grenze möglich.
+- Läuft eine befristete Lizenz ab, bleiben alle Daten erhalten. Das Programm läuft dann als Community-Version: Plätze oberhalb von 100 sind **gesperrt**
+  (nicht mehr sichtbar oder bearbeitbar); ihre Daten stehen weiter im **CSV-Export**. Mit einer neuen Lizenz sind sie sofort wieder nutzbar.
+  Rechtzeitig vor Ablauf erinnert das Programm an die Verlängerung.
 
 ## Updates
 
