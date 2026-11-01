@@ -47,6 +47,7 @@ Dort liegen zwei Dateien:
   Waschen und Wuchten mit Kästchen zum Abhaken. Die **Tagesliste** ist nach Uhrzeit sortiert und enthält alle Termine;
   die **Holliste** ist nach Lagerplatz sortiert und enthält nur Kunden mit eingelagerten Reifen – zum Holen in einem Gang.
 - Lagerplan, Liste und Suche (Kunde, Kennzeichen, Dimension, Lagerort …), CSV-Export für Excel
+- **CSV-Import** im Programmfenster: CSV-Export zurückspielen oder Kunden aus einer Excel-Tabelle übernehmen
 - **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile
 - **Änderungsverlauf** (was wann geändert wurde) und **tägliche automatische Sicherung**
 - Update-Hinweis im Programm mit Installation per Klick
@@ -85,6 +86,19 @@ Programm beenden, die gewünschte Datei aus `sicherungen` als `reifenlager.db` i
 **Ich habe neue Rechner / will umziehen.**
 Datenordner (mindestens `reifenlager.db`) auf den neuen Rechner kopieren, Programm installieren und starten.
 Die Lizenz (`lizenz.txt`) liegt im selben Ordner.
+
+**Wie importiere ich Daten aus einer CSV-Datei?**
+Im Programmfenster unter **CSV-Import** die Datei mit **„Durchsuchen …"** wählen (oder ins Fenster ziehen), dann
+**„Prüfen"**: Das Programm zeigt, wie viele Plätze neu angelegt werden und welche Zeilen Fehler haben – es wird noch nichts
+geändert. Mit **„Importieren"** werden die Daten übernommen; vorher legt das Programm automatisch eine Sicherung im Ordner
+`sicherungen` an. Belegte Plätze werden übersprungen, außer du setzt den Haken **„Belegte Plätze überschreiben"**.
+
+Die Datei braucht in der ersten Zeile Spaltennamen; nötig sind **platz** und **kunde**, alle anderen sind optional
+(z. B. telefon, kennzeichen, fahrzeug, saison, status, hersteller, modell, dimension, felge, anzahl, profil_vl … profil_hr,
+eingelagert_am, bemerkung – auch deutsche Namen wie „Lagerplatz", „Name" oder „Reifengröße" werden erkannt).
+Eine Zeile je Reifensatz; zwei Zeilen mit gleichem Platz ergeben einen Kunden mit Sommer- und Winterreifen.
+Trennzeichen Semikolon, Komma oder Tabulator; Dateien direkt aus Excel funktionieren. Am einfachsten: das Format des
+**CSV-Exports** verwenden.
 
 **Was bedeutet „am Fahrzeug"?**
 Der Kunde fährt gerade mit diesem Satz. Der Platz bleibt für ihn reserviert; der andere Satz kann im Lager liegen.
