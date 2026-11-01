@@ -41,8 +41,10 @@ Dort liegen zwei Dateien:
   damit die Werte in der Datenbank immer aktuell sind.
 - **Terminplaner:** Termine je Tag mit Wochenübersicht, für eingelagerte Kunden (Platznummer) oder Laufkunden.
   Der passende Satz wird automatisch gewählt (der im Lager liegt bzw. nach Jahreszeit) oder frei ausgewählt.
-- **Tagesliste zum Drucken:** welche Reifen an einem Tag aus dem Lager zu holen sind – sortiert nach Uhrzeit
-  oder nach Lagerplatz (Holliste), mit Kästchen zum Abhaken
+  Je Termin gibt es Haken für **Winterreifen wuchten/waschen** und **Sommerreifen wuchten/waschen**.
+- **Tagesliste und Holliste zum Drucken** (A4, gleicher Aufbau): Lagerplatz, Kennzeichen, Name, Reifengröße,
+  Waschen und Wuchten mit Kästchen zum Abhaken. Die **Tagesliste** ist nach Uhrzeit sortiert und enthält alle Termine;
+  die **Holliste** ist nach Lagerplatz sortiert und enthält nur Kunden mit eingelagerten Reifen – zum Holen in einem Gang.
 - Lagerplan, Liste und Suche (Kunde, Kennzeichen, Dimension, Lagerort …), CSV-Export für Excel
 - **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile
 - **Änderungsverlauf** (was wann geändert wurde) und **tägliche automatische Sicherung**
@@ -95,8 +97,9 @@ Offene Termine des Kunden bis heute werden dabei automatisch als erledigt markie
 
 **Wie plane ich Termine und drucke die Tagesliste?**
 Menüpunkt **Termine**: Tag wählen, unter „Neuer Termin" Datum, Uhrzeit und Lagerplatz eintragen (oder auf der Platzseite
-**„Termin planen"**). Mit **„Tagesliste drucken"** erhältst du die Liste aller Reifen, die an diesem Tag aus dem Lager
-geholt werden müssen – auf Wunsch nach Lagerplatz sortiert, um alles in einem Gang zu holen.
+**„Termin planen"**) und bei Bedarf die Haken für Waschen und Wuchten setzen. Mit **„Tagesliste drucken"** öffnet sich
+die Tagesliste (nach Uhrzeit) im selben Browsertab; oben kannst du zur **Holliste** (nach Lagerplatz) umschalten.
+**„Drucken"** öffnet den Druckdialog, **„Zurück"** führt wieder zur Terminübersicht.
 
 ## Lizenz und Haftung
 
