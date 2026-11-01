@@ -1,7 +1,7 @@
 # Reifenmanager
 
-Verwaltung von Kundenreifensätzen im Reifenhotel: Lagerplätze, Reifendaten, Sommer- und Winterreifen,
-Einlagerungsbescheid zum Drucken – als Windows-Programm mit Weboberfläche, die im ganzen Firmennetzwerk erreichbar ist.
+Verwaltung von Kundenreifensätzen im Reifenhotel: Lagerplätze, Reifendaten, Sommer- und Winterreifen, Reifenwechsel,
+Terminplaner und Einlagerungsbescheid zum Drucken – als Windows-Programm mit Weboberfläche, die im ganzen Firmennetzwerk erreichbar ist.
 
 ## Download
 
@@ -21,7 +21,8 @@ Dort liegen zwei Dateien:
 1. Setup ausführen und dem Assistenten folgen (ohne Administratorrechte für den eigenen Benutzer, oder „für alle Benutzer").
 2. Das Programmfenster zeigt **„Server läuft"** und die **Adressen im Netzwerk**, z. B. `http://192.168.1.20:8080`.
    Diese Adresse gibst du auf jedem Rechner, Tablet oder Handy im Netzwerk in den Browser ein.
-3. Ein **Passwort** setzt du im Programmfenster (Benutzername: `reifen`). Ohne Passwort kann jeder im Netzwerk die Daten sehen.
+3. **Benutzername und Passwort** legst du im Programmfenster fest (voreingestellt ist der Benutzername `reifen`).
+   Ohne Passwort kann jeder im Netzwerk die Daten sehen.
    Der Zugriff ist unverschlüsselt (HTTP) – bitte nur im internen Netz verwenden.
 4. Beim ersten Start fragt die Windows-Firewall, ob der Zugriff im **privaten Netzwerk** erlaubt sein soll – bitte erlauben,
    sonst erreichen andere Geräte die Seite nicht.
@@ -33,7 +34,15 @@ Dort liegen zwei Dateien:
 - Kunde, Telefon, Kennzeichen, Fahrzeug
 - bis zu **zwei Reifensätze je Platz** (z. B. 4 Winter + 4 Sommer) mit Hersteller, Modell, Dimension, Index,
   Felge, Anzahl und **Profiltiefe je Reifen**
-- **Status je Satz:** im Lager oder am Fahrzeug – im Lagerplan auf einen Blick sichtbar (❄ Winter, ☀ Sommer)
+- **Status je Satz:** im Lager oder am Fahrzeug – im Lagerplan auf einen Blick sichtbar (❄ Winter, ☀ Sommer).
+  Es kann immer nur **ein Satz am Fahrzeug** sein.
+- **Reifenwechsel:** Kunde, Kennzeichen oder Platz suchen, Satz wählen – der bisher montierte Satz wird automatisch
+  als eingelagert geführt. Dabei fragt das Programm die **Profiltiefe des Satzes ab, der ins Lager kommt**,
+  damit die Werte in der Datenbank immer aktuell sind.
+- **Terminplaner:** Termine je Tag mit Wochenübersicht, für eingelagerte Kunden (Platznummer) oder Laufkunden.
+  Der passende Satz wird automatisch gewählt (der im Lager liegt bzw. nach Jahreszeit) oder frei ausgewählt.
+- **Tagesliste zum Drucken:** welche Reifen an einem Tag aus dem Lager zu holen sind – sortiert nach Uhrzeit
+  oder nach Lagerplatz (Holliste), mit Kästchen zum Abhaken
 - Lagerplan, Liste und Suche (Kunde, Kennzeichen, Dimension, Lagerort …), CSV-Export für Excel
 - **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile
 - **Änderungsverlauf** (was wann geändert wurde) und **tägliche automatische Sicherung**
@@ -76,6 +85,18 @@ Die Lizenz (`lizenz.txt`) liegt im selben Ordner.
 
 **Was bedeutet „am Fahrzeug"?**
 Der Kunde fährt gerade mit diesem Satz. Der Platz bleibt für ihn reserviert; der andere Satz kann im Lager liegen.
+Es kann nur ein Satz am Fahrzeug sein – beim Reifenwechsel stellt das Programm den Status automatisch richtig.
+
+**Wie mache ich einen Reifenwechsel?**
+Menüpunkt **Reifenwechsel** (oder der Knopf auf der Platzseite bzw. im Terminplaner): Kunde suchen, auf
+z. B. „❄ Winter ans Fahrzeug, ☀ Sommer einlagern" klicken, die gemessene Profiltiefe des eingelagerten Satzes eintragen
+und **„Reifenwechsel speichern"**. Danach kannst du direkt den Einlagerungsbescheid drucken.
+Offene Termine des Kunden bis heute werden dabei automatisch als erledigt markiert.
+
+**Wie plane ich Termine und drucke die Tagesliste?**
+Menüpunkt **Termine**: Tag wählen, unter „Neuer Termin" Datum, Uhrzeit und Lagerplatz eintragen (oder auf der Platzseite
+**„Termin planen"**). Mit **„Tagesliste drucken"** erhältst du die Liste aller Reifen, die an diesem Tag aus dem Lager
+geholt werden müssen – auf Wunsch nach Lagerplatz sortiert, um alles in einem Gang zu holen.
 
 ## Lizenz und Haftung
 
