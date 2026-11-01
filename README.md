@@ -99,7 +99,8 @@ Im Programmfenster unter **CSV-Import** die Datei mit **„Durchsuchen …"** w�
 - Eine **Vorschau** zeigt die ersten Zeilen, darunter steht, wie viele Plätze neu angelegt werden und welche Zeilen Fehler
   haben – das wird bei jeder Änderung neu berechnet, es wird noch nichts geändert.
 - Mit **„… Plätze importieren"** werden die Daten in einem Schritt übernommen (bei einem Fehler wird nichts geändert);
-  vorher legt das Programm automatisch eine Sicherung im Ordner `sicherungen` an.
+  vorher legt das Programm automatisch eine Sicherung im Ordner `sicherungen` an. Danach steht das Ergebnis im Fenster; **„OK"**
+  schließt die Meldung, und die Karte sieht wieder aus wie vor dem Import.
 - Belegte Plätze werden übersprungen, außer du setzt den Haken **„Belegte Plätze überschreiben"**.
 
 Eine Zeile je Reifensatz; zwei Zeilen mit gleichem Platz ergeben einen Kunden mit Sommer- und Winterreifen. Am einfachsten:
