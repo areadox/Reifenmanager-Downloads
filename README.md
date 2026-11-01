@@ -1,21 +1,39 @@
 # Reifenmanager
 
 Verwaltung von Kundenreifensätzen im Reifenhotel: Lagerplätze, Reifendaten, Sommer- und Winterreifen, Reifenwechsel,
-Terminplaner und Einlagerungsbescheid zum Drucken – als Windows-Programm mit Weboberfläche, die im ganzen Firmennetzwerk erreichbar ist.
+Terminplaner und Einlagerungsbescheid zum Drucken – als Programm für Windows und Linux mit Weboberfläche, die im ganzen
+Firmennetzwerk erreichbar ist.
 
 ## Download
 
 Die aktuelle Version findest du unter **[Releases](../../releases/latest)** (rechts auf dieser Seite).
-Dort liegen zwei Dateien:
+Dort liegen drei Dateien:
 
 | Datei | Verwendung |
 |---|---|
-| `Reifenmanager-Setup-<Version>.exe` | **Empfohlen.** Installer mit Startmenü-Eintrag, Deinstallation über die Windows-Einstellungen und Update-Funktion im Programm |
-| `Reifenmanager-portable.exe` | Einzelne Datei ohne Installation (z. B. für einen USB-Stick) |
+| `Reifenmanager-Setup-<Version>.exe` | **Windows, empfohlen.** Installer mit Startmenü-Eintrag, Deinstallation über die Windows-Einstellungen und Update-Funktion im Programm |
+| `Reifenmanager-portable.exe` | Windows: einzelne Datei ohne Installation (z. B. für einen USB-Stick) |
+| `Reifenmanager-linux-x86_64-<Version>.tar.gz` | **Linux** (64 Bit): Programmfenster und Server ohne Fenster, siehe [Linux](#linux) |
 
 > **Hinweis zu Windows SmartScreen:** Die Programme sind nicht digital signiert. Beim ersten Start meldet Windows evtl.
 > „Der Computer wurde durch Windows geschützt". Klicke auf **Weitere Informationen → Trotzdem ausführen**.
 > Meldet Microsoft Defender einen Fund wie *Trojan:Win32/Bearfoos.A!ml*, siehe [Häufige Fragen](#häufige-fragen).
+
+## Linux
+
+Das Paket `Reifenmanager-linux-x86_64-<Version>.tar.gz` entpacken (`tar xzf Reifenmanager-linux-x86_64-*.tar.gz`). Es enthält:
+
+| Datei | Verwendung |
+|---|---|
+| `reifenmanager` | Programmfenster wie unter Windows – starten mit `./reifenmanager`. Benötigt eine grafische Oberfläche und ein aktuelles System (z. B. Ubuntu 22.04, Debian 12, Linux Mint 21 oder neuer) |
+| `reifenmanager-server` | ohne Fenster, für Server, NAS oder Mini-PC; läuft auf jedem 64-Bit-Linux: `./reifenmanager-server --port 8080 --passwort GEHEIM` (weitere Optionen mit `--help`) |
+| `reifenmanager.service` | Vorlage für einen systemd-Dienst, der den Server beim Hochfahren startet (Anleitung in der Datei) |
+| `LIESMICH.txt` | Kurzanleitung |
+
+Die Daten liegen unter `~/.local/share/reifenmanager` (beim Server mit `--daten` wählbar) und sind mit der Windows-Version
+austauschbar – `reifenlager.db` und `lizenz.txt` einfach kopieren. Damit andere Geräte zugreifen können, den Port in der
+Firewall freigeben (z. B. `sudo ufw allow 8080/tcp`). Autostart und automatische Installation von Updates gibt es nur unter
+Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues Paket entpacken, Dateien ersetzen – die Daten bleiben).
 
 ## Erste Schritte
 
@@ -66,7 +84,7 @@ Dort liegen zwei Dateien:
 
 Das Programm sucht beim Start nach einer neuen Version und meldet sie im Fenster und in der Weboberfläche.
 Mit **„Jetzt aktualisieren"** wird der Installer geladen und die neue Version installiert; deine Daten bleiben erhalten.
-(Bei der portablen Version öffnet der Knopf diese Download-Seite.)
+(Bei der portablen Version und unter Linux öffnet der Knopf diese Download-Seite.)
 
 ## Häufige Fragen
 
