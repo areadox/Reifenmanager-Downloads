@@ -151,3 +151,7 @@ Lade das Programm nur von dieser Seite herunter. Wenn du der Datei vertraust:
 
 Alle Rechte vorbehalten. Die Community-Version darf kostenlos genutzt werden; weitergehende Nutzung benötigt einen Lizenzschlüssel.
 Die Software wird ohne Gewährleistung „wie besehen" bereitgestellt. Sichere deine Daten regelmäßig zusätzlich außerhalb des Rechners.
+
+Der Reifenmanager enthält Open-Source-Bibliotheken anderer Entwickler (freizügige Lizenzen wie MIT, Apache-2.0, BSD).
+Ihre Lizenzhinweise findest du im Programmfenster unter **Lizenz → „Lizenzen Dritter"**, in der Weboberfläche über den Link
+**„Lizenzen Dritter"** unten auf jeder Seite, im Startmenü (Setup) und als `LIZENZEN-DRITTER.html` im Linux-Paket.
