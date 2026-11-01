@@ -15,6 +15,7 @@ Dort liegen zwei Dateien:
 
 > **Hinweis zu Windows SmartScreen:** Die Programme sind nicht digital signiert. Beim ersten Start meldet Windows evtl.
 > „Der Computer wurde durch Windows geschützt". Klicke auf **Weitere Informationen → Trotzdem ausführen**.
+> Meldet Microsoft Defender einen Fund wie *Trojan:Win32/Bearfoos.A!ml*, siehe [Häufige Fragen](#häufige-fragen).
 
 ## Erste Schritte
 
@@ -100,6 +101,13 @@ Menüpunkt **Termine**: Tag wählen, unter „Neuer Termin" Datum, Uhrzeit und L
 **„Termin planen"**) und bei Bedarf die Haken für Waschen und Wuchten setzen. Mit **„Tagesliste drucken"** öffnet sich
 die Tagesliste (nach Uhrzeit) im selben Browsertab; oben kannst du zur **Holliste** (nach Lagerplatz) umschalten.
 **„Drucken"** öffnet den Druckdialog, **„Zurück"** führt wieder zur Terminübersicht.
+
+**Microsoft Defender meldet „Trojan:Win32/Bearfoos.A!ml" (oder ähnlich).**
+Das Kürzel **„!ml"** bedeutet, dass Defender die Datei nur per *maschinellem Lernen* als verdächtig einschätzt – es ist
+keine Erkennung eines bekannten Schädlings. Neue, nicht digital signierte Programme werden so häufig fälschlich gemeldet.
+Lade das Programm nur von dieser Seite herunter. Wenn du der Datei vertraust:
+**Windows-Sicherheit → Viren- & Bedrohungsschutz → Schutzverlauf**, den Eintrag öffnen und **„Zulassen"** bzw.
+**„Wiederherstellen"** wählen. Bitte melde uns den Fund mit Versionsnummer, damit wir ihn bei Microsoft klären können.
 
 ## Lizenz und Haftung
 
