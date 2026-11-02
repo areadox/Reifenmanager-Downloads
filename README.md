@@ -45,7 +45,8 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
    Der Zugriff ist unverschlüsselt (HTTP) – bitte nur im internen Netz verwenden.
 4. Beim ersten Start fragt die Windows-Firewall, ob der Zugriff im **privaten Netzwerk** erlaubt sein soll – bitte erlauben,
    sonst erreichen andere Geräte die Seite nicht.
-5. Unter **Lagerorte** legst du fest, welche Plätze es gibt (z. B. Platz 1–50 = „Halle A, Regal 1").
+5. Unter **Admin** trägst du die Kopfzeile deiner Firma ein und legst unter **Lagerorte** fest, welche Plätze es gibt
+   (z. B. Platz 1–50 = „Halle A, Regal 1").
 6. Mit **+ Einlagern** erfasst du den ersten Kunden.
 
 ## Funktionen
@@ -68,6 +69,13 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 - **CSV-Import** im Programmfenster: Datei hineinziehen, Spalten werden automatisch erkannt – CSV-Export zurückspielen
   oder Kunden aus dem DMS bzw. einer Excel-Tabelle übernehmen
 - **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile
+- **+ Einlagern** mit Suche nach bestehenden Sätzen (Platznummer, Kennzeichen oder Kunde) – mit Knöpfen zum Öffnen,
+  Bearbeiten, Reifenwechsel und Termin; tippt man eine belegte Platznummer ein, zeigt das Formular sofort, wer dort liegt
+- **Meldeliste Profiltiefe:** alle Sätze, bei denen ein Reifen die Mindestprofiltiefe erreicht oder unterschreitet –
+  getrennt einstellbar für Sommer-, Winter- und Ganzjahresreifen (Standard 3 / 4 / 4 mm), druckbar
+- **Überlagerung:** Sätze, die länger als eine Frist (Standard 12 Monate) oder seit einem frei wählbaren Datum im Lager
+  liegen, ohne gewechselt worden zu sein – mit Dauer, druckbar
+- **Admin:** Kopfzeile, Mindestprofiltiefen, Frist für die Überlagerung sowie Lagerorte, Lizenz, Verlauf und CSV-Export
 - **Änderungsverlauf** (was wann geändert wurde) und **tägliche automatische Sicherung**
 - Update-Hinweis im Programm mit Installation per Klick
 
@@ -123,6 +131,11 @@ Im Programmfenster unter **CSV-Import** die Datei mit **„Durchsuchen …"** w�
 
 Eine Zeile je Reifensatz; zwei Zeilen mit gleichem Platz ergeben einen Kunden mit Sommer- und Winterreifen. Am einfachsten:
 das Format des **CSV-Exports** verwenden.
+
+**Woher weiß das Programm, wie lange ein Satz im Lager liegt?**
+Jeder Satz merkt sich das Datum, an dem er ins Lager kam (beim Einlagern, beim Reifenwechsel oder wenn er wieder
+eingelagert wird); es steht auf der Platzseite unter „Im Lager seit". Bei Daten aus älteren Versionen wird es beim ersten
+Start aus dem Verlauf ermittelt, sonst gilt das Einlagerungsdatum des Kunden.
 
 **Was bedeutet „am Fahrzeug"?**
 Der Kunde fährt gerade mit diesem Satz. Der Platz bleibt für ihn reserviert; der andere Satz kann im Lager liegen.
