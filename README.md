@@ -7,6 +7,9 @@ Firmennetzwerk erreichbar ist.
 ## Download
 
 Die aktuelle Version findest du unter **[Releases](../../releases/latest)** (rechts auf dieser Seite).
+Der Reifenmanager ist noch in Entwicklung, daher tragen die Versionen eine **0.x**-Nummer (z. B. 0.3.14).
+Wer noch die frühere Python-Version (2.x) oder eine Testversion 3.0.x installiert hat: einfach das aktuelle Setup
+installieren – die Daten werden übernommen; ab dann kommen Updates wieder automatisch.
 Dort liegen drei Dateien:
 
 | Datei | Verwendung |
@@ -52,8 +55,9 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 ## Funktionen
 
 - Kunde, Telefon, Kennzeichen, Fahrzeug
-- bis zu **zwei Reifensätze je Platz** (z. B. 4 Winter + 4 Sommer) mit Hersteller, Modell, Dimension, Index,
-  Felge, Anzahl und **Profiltiefe je Reifen**
+- bis zu **zwei Reifensätze je Platz** (z. B. 4 Winter + 4 Sommer) mit Hersteller, Modell, Felge, **Profiltiefe je Reifen**
+  und **Reifengröße/Index je Achse** – bei Mischbereifung (vorne andere Größe als hinten) einfach die Hinterachse ausfüllen
+- **Anzahl je Satz:** 1, 2, 3, 4 oder **2×2** (2 vorne + 2 hinten)
 - **Status je Satz:** im Lager oder am Fahrzeug – im Lagerplan auf einen Blick sichtbar (❄ Winter, ☀ Sommer).
   Es kann immer nur **ein Satz am Fahrzeug** sein.
 - **Reifenwechsel:** Kunde, Kennzeichen oder Platz suchen, Satz wählen – der bisher montierte Satz wird automatisch
@@ -121,6 +125,7 @@ Im Programmfenster unter **CSV-Import** die Datei mit **„Durchsuchen …"** w�
 - Zeichensatz (UTF-8 oder Windows/ANSI) und Trennzeichen (Semikolon, Komma, Tabulator) werden erkannt; die erste Zeile
   muss die Spaltenüberschriften enthalten.
 - Die Spalten werden **automatisch zugeordnet** (z. B. *Lagerplatz* → Platz, *Name* → Kunde, *Reifengröße* → Dimension,
+  *Reifengröße hinten* / *Index hinten* → Hinterachse, Anzahl auch als „2x2",
   *Marke* → Hersteller). Unter **„Zuordnung der Spalten"** lässt sich das ändern; fehlt Platz oder Kunde, klappt sie von selbst auf.
 - Eine **Vorschau** zeigt die ersten Zeilen, darunter steht, wie viele Plätze neu angelegt werden und welche Zeilen Fehler
   haben – das wird bei jeder Änderung neu berechnet, es wird noch nichts geändert.
