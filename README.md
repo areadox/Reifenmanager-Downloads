@@ -43,8 +43,9 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 1. Setup ausführen und dem Assistenten folgen (ohne Administratorrechte für den eigenen Benutzer, oder „für alle Benutzer").
 2. Das Programmfenster zeigt **„Server läuft"** und die **Adressen im Netzwerk**, z. B. `http://192.168.1.20:8080`.
    Diese Adresse gibst du auf jedem Rechner, Tablet oder Handy im Netzwerk in den Browser ein.
-3. **Benutzername und Passwort** legst du im Programmfenster fest (voreingestellt ist der Benutzername `reifen`).
-   Ohne Passwort kann jeder im Netzwerk die Daten sehen.
+3. Im Programmfenster legst du ein Passwort für den **Hauptzugang** fest (voreingestellter Name `reifen`) und richtest
+   danach im Browser unter **Admin → Benutzer & Rechte** für jeden Mitarbeiter einen eigenen Zugang ein.
+   Ohne Passwort und ohne Benutzer kann jeder im Netzwerk die Daten sehen und ändern.
    Der Zugriff ist unverschlüsselt (HTTP) – bitte nur im internen Netz verwenden.
 4. Beim ersten Start fragt die Windows-Firewall, ob der Zugriff im **privaten Netzwerk** erlaubt sein soll – bitte erlauben,
    sonst erreichen andere Geräte die Seite nicht.
@@ -79,8 +80,14 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
   getrennt einstellbar für Sommer-, Winter- und Ganzjahresreifen (Standard 3 / 4 / 4 mm), druckbar
 - **Überlagerung:** Sätze, die länger als eine Frist (Standard 12 Monate) oder seit einem frei wählbaren Datum im Lager
   liegen, ohne gewechselt worden zu sein – mit Dauer, druckbar
+- **Benutzer & Rechte:** eigener Zugang für jeden Mitarbeiter mit Vorlagen **Administrator**, **Mitarbeiter**
+  (einlagern, Reifenwechsel, Termine, Listen) und **Nur lesen** – oder einzelne Rechte frei anhaken
+  (Einlagern, Auslagern, Reifenwechsel, Termine, Listen, Verlauf, CSV-Export, Admin). Anmeldung über eine Anmeldeseite,
+  auf Wunsch „angemeldet bleiben“ (30 Tage); jeder kann sein Passwort unter **Mein Konto** ändern
+- **Übersichtliche Menüleiste:** Lagerplan, Liste, Reifenwechsel, Termine, Aufklappmenüs **Listen** und **Admin**,
+  **+ Einlagern**, Suche und Benutzermenü – jeder sieht nur, was er darf; auf dem Handy hinter dem Knopf ☰
 - **Admin:** Kopfzeile, Mindestprofiltiefen, Frist für die Überlagerung sowie Lagerorte, Lizenz, Verlauf und CSV-Export
-- **Änderungsverlauf** (was wann geändert wurde) und **tägliche automatische Sicherung**
+- **Änderungsverlauf** (was wann **von wem** geändert wurde, filterbar nach Benutzer) und **tägliche automatische Sicherung**
 - Update-Hinweis im Programm mit Installation per Klick
 
 ## Community-Version und Firmenlizenz
@@ -145,6 +152,18 @@ Start aus dem Verlauf ermittelt, sonst gilt das Einlagerungsdatum des Kunden.
 **Was bedeutet „am Fahrzeug"?**
 Der Kunde fährt gerade mit diesem Satz. Der Platz bleibt für ihn reserviert; der andere Satz kann im Lager liegen.
 Es kann nur ein Satz am Fahrzeug sein – beim Reifenwechsel stellt das Programm den Status automatisch richtig.
+
+**Wie richte ich Benutzer ein und was dürfen sie?**
+Unter **Admin → Benutzer & Rechte** Name und Passwort eingeben, eine Vorlage wählen (oder Rechte einzeln anhaken) und
+**„Benutzer anlegen“**. Ansehen und Drucken (Lagerplan, Liste, Platzseiten, Termine, Tagesliste) darf jeder angemeldete
+Benutzer; alles andere regeln die Rechte – Knöpfe ohne Recht werden gar nicht erst angezeigt. Benutzer lassen sich
+sperren, ändern oder löschen; der letzte Administrator kann sich nicht selbst aussperren.
+
+**Abmelden** geht über das Benutzermenü oben rechts – auf jedem Gerät, auch am PC, auf dem das Programm läuft.
+
+**Ich habe mein Passwort vergessen.**
+Ein Administrator setzt es unter **Benutzer & Rechte** neu. Hat niemand mehr Zugang, im Programmfenster auf dem
+Server-PC ein Passwort für den **Hauptzugang** setzen – damit meldest du dich immer als Administrator an.
 
 **Wie mache ich einen Reifenwechsel?**
 Menüpunkt **Reifenwechsel** (oder der Knopf auf der Platzseite bzw. im Terminplaner): Kunde suchen, auf
