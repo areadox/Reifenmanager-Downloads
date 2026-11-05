@@ -77,7 +77,10 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 - **+ Einlagern** mit Suche nach bestehenden Sätzen (Platznummer, Kennzeichen oder Kunde) – mit Knöpfen zum Öffnen,
   Bearbeiten, Reifenwechsel und Termin; tippt man eine belegte Platznummer ein, zeigt das Formular sofort, wer dort liegt
 - **Meldeliste Profiltiefe:** alle Sätze, bei denen ein Reifen die Mindestprofiltiefe erreicht oder unterschreitet –
-  getrennt einstellbar für Sommer-, Winter- und Ganzjahresreifen (Standard 3 / 4 / 4 mm), druckbar
+  getrennt einstellbar für Sommer-, Winter- und Ganzjahresreifen (Standard 3 / 4 / 4 mm), druckbar.
+  Mit **„Bearbeitet“** (z. B. Kunde informiert) verschwindet ein Satz aus den offenen Meldungen – unter dem Filter
+  **„Bearbeitet“** bzw. **„Alle“** ist er weiter zu sehen (mit Datum und Benutzer) und lässt sich wieder öffnen.
+  Wird später eine neue Profiltiefe eingetragen, die immer noch zu niedrig ist, erscheint er wieder als offen
 - **Überlagerung:** Sätze, die länger als eine Frist (Standard 12 Monate) oder seit einem frei wählbaren Datum im Lager
   liegen, ohne gewechselt worden zu sein – mit Dauer, druckbar
 - **Benutzer & Rechte:** eigener Zugang für jeden Mitarbeiter mit Vorlagen **Administrator**, **Mitarbeiter**
