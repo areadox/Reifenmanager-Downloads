@@ -63,7 +63,10 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
   Es kann immer nur **ein Satz am Fahrzeug** sein.
 - **Reifenwechsel:** Kunde, Kennzeichen oder Platz suchen, Satz wählen – der bisher montierte Satz wird automatisch
   als eingelagert geführt. Dabei fragt das Programm die **Profiltiefe des Satzes ab, der ins Lager kommt**,
-  damit die Werte in der Datenbank immer aktuell sind.
+  damit die Werte in der Datenbank immer aktuell sind. Außerdem siehst du die **Satzdaten** (Hersteller, Modell, Größe,
+  Index, Felge, Anzahl) beider Sätze und kannst sie gleich **berichtigen**. Je Reifen gibt es einen Haken **„erneuern“** –
+  so markierte Reifen erscheinen auf der **Meldeliste**, auch wenn die Profiltiefe noch reicht (abwählbar unter
+  „Bearbeiten“, z. B. nachdem der Reifen ersetzt wurde).
 - **Terminplaner:** Termine je Tag mit Wochenübersicht, für eingelagerte Kunden (Platznummer) oder Laufkunden.
   Der passende Satz wird automatisch gewählt (der im Lager liegt bzw. nach Jahreszeit) oder frei ausgewählt.
   Je Termin gibt es Haken für **Winterreifen wuchten/waschen** und **Sommerreifen wuchten/waschen**.
@@ -76,7 +79,8 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 - **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile
 - **+ Einlagern** mit Suche nach bestehenden Sätzen (Platznummer, Kennzeichen oder Kunde) – mit Knöpfen zum Öffnen,
   Bearbeiten, Reifenwechsel und Termin; tippt man eine belegte Platznummer ein, zeigt das Formular sofort, wer dort liegt
-- **Meldeliste Profiltiefe:** alle Sätze, bei denen ein Reifen die Mindestprofiltiefe erreicht oder unterschreitet –
+- **Meldeliste Profiltiefe:** alle Sätze, bei denen ein Reifen die Mindestprofiltiefe erreicht oder unterschreitet
+  oder zum Erneuern markiert ist –
   getrennt einstellbar für Sommer-, Winter- und Ganzjahresreifen (Standard 3 / 4 / 4 mm), druckbar.
   Mit **„Bearbeitet“** (z. B. Kunde informiert) verschwindet ein Satz aus den offenen Meldungen – unter dem Filter
   **„Bearbeitet“** bzw. **„Alle“** ist er weiter zu sehen (mit Datum und Benutzer) und lässt sich wieder öffnen.
@@ -170,8 +174,8 @@ Server-PC ein Passwort für den **Hauptzugang** setzen – damit meldest du dich
 
 **Wie mache ich einen Reifenwechsel?**
 Menüpunkt **Reifenwechsel** (oder der Knopf auf der Platzseite bzw. im Terminplaner): Kunde suchen, auf
-z. B. „❄ Winter ans Fahrzeug, ☀ Sommer einlagern" klicken, die gemessene Profiltiefe des eingelagerten Satzes eintragen
-und **„Reifenwechsel speichern"**. Danach kannst du direkt den Einlagerungsbescheid drucken.
+z. B. „❄ Winter ans Fahrzeug, ☀ Sommer einlagern" klicken, die gemessene Profiltiefe des eingelagerten Satzes eintragen,
+bei Bedarf Satzdaten berichtigen und Reifen zum **Erneuern** anhaken, dann **„Reifenwechsel speichern"**. Danach kannst du direkt den Einlagerungsbescheid drucken.
 Offene Termine des Kunden bis heute werden dabei automatisch als erledigt markiert.
 
 **Wie plane ich Termine und drucke die Tagesliste?**
