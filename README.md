@@ -79,7 +79,8 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 - Lagerplan, Liste und Suche (Kunde, Kennzeichen, Dimension, Lagerort …), CSV-Export für Excel
 - **CSV-Import** im Programmfenster: Datei hineinziehen, Spalten werden automatisch erkannt – CSV-Export zurückspielen
   oder Kunden aus dem DMS bzw. einer Excel-Tabelle übernehmen
-- **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile
+- **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile – es kommen immer **zwei Exemplare** heraus,
+  eins für den Kunden und eins für den Betrieb (oben rechts gekennzeichnet)
 - **+ Einlagern** mit Suche nach bestehenden Sätzen (Platznummer, Kennzeichen oder Kunde) – mit Knöpfen zum Öffnen,
   Bearbeiten, Reifenwechsel und Termin; tippt man eine belegte Platznummer ein, zeigt das Formular sofort, wer dort liegt
 - **Meldeliste mit Saison-Ablauf:** alle Reifensätze, bei denen ein Reifen die Mindestprofiltiefe erreicht oder
