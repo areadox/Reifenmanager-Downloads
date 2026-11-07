@@ -67,6 +67,9 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
   Index, Felge, Anzahl) beider Sätze und kannst sie gleich **berichtigen**. Je Reifen gibt es einen Haken **„erneuern“** –
   so markierte Reifen erscheinen auf der **Meldeliste**, auch wenn die Profiltiefe noch reicht (abwählbar unter
   „Bearbeiten“, z. B. nachdem der Reifen ersetzt wurde).
+  Ist bisher **nur ein Satz** gespeichert, fragt der Reifenwechsel nach dem **Satz, der vom Fahrzeug kommt**: welcher
+  Satz Winter- und welcher Sommerreifen ist, dazu Hersteller, Größe, Profiltiefe usw. – er wird dann gleich als zweiter
+  Satz eingelagert. Wird kein Satz eingelagert (Kunde nimmt die Reifen mit), einfach „Kein Satz kommt ins Lager“ wählen.
 - **Terminplaner:** Termine je Tag mit Wochenübersicht, für eingelagerte Kunden (Platznummer) oder Laufkunden.
   Der passende Satz wird automatisch gewählt (der im Lager liegt bzw. nach Jahreszeit) oder frei ausgewählt.
   Je Termin gibt es Haken für **Winterreifen wuchten/waschen** und **Sommerreifen wuchten/waschen**.
@@ -79,17 +82,30 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 - **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile
 - **+ Einlagern** mit Suche nach bestehenden Sätzen (Platznummer, Kennzeichen oder Kunde) – mit Knöpfen zum Öffnen,
   Bearbeiten, Reifenwechsel und Termin; tippt man eine belegte Platznummer ein, zeigt das Formular sofort, wer dort liegt
-- **Meldeliste Profiltiefe:** alle Sätze, bei denen ein Reifen die Mindestprofiltiefe erreicht oder unterschreitet
-  oder zum Erneuern markiert ist –
-  getrennt einstellbar für Sommer-, Winter- und Ganzjahresreifen (Standard 3 / 4 / 4 mm), druckbar.
-  Mit **„Bearbeitet“** (z. B. Kunde informiert) verschwindet ein Satz aus den offenen Meldungen – unter dem Filter
-  **„Bearbeitet“** bzw. **„Alle“** ist er weiter zu sehen (mit Datum und Benutzer) und lässt sich wieder öffnen.
-  Wird später eine neue Profiltiefe eingetragen, die immer noch zu niedrig ist, erscheint er wieder als offen
+- **Meldeliste mit Saison-Ablauf:** alle Reifensätze, bei denen ein Reifen die Mindestprofiltiefe erreicht oder
+  unterschreitet (getrennt einstellbar für Sommer, Winter, Ganzjahr; Standard 3 / 4 / 4 mm) oder zum Erneuern markiert ist.
+  Vor der neuen Saison arbeitest du sie Schritt für Schritt ab – jede Stufe hat ihre eigene Liste:
+  1. **Anrufen** (druckbare **Anrufliste** mit Telefon und Platz für Notizen): Ergebnis eintragen – *will neue Reifen*,
+     *fährt noch diese Saison* (verschwindet bis zur nächsten Saison und kommt dann von selbst wieder), *nicht erreicht*
+     (mit „wieder anrufen am“) oder *will nicht*
+  2. **Bestellen:** Hersteller, Modell, Größe/Index, Anzahl, Lieferant, Bestellnummer, Preis – die **Bestellliste** fasst
+     gleiche Reifen zusammen (z. B. „205/55 R16 91H – 3 Sätze, 12 Stück“), dann „Bestellt“
+  3. **Lieferung offen:** „Geliefert“ anklicken, sobald die Reifen da sind
+  4. **Vormontieren** (druckbare Liste mit Lagerplatz): nach dem Vormontieren werden die Satzdaten automatisch auf die
+     neuen Reifen umgestellt
+  5. **Termin vereinbaren:** Termin direkt aus der Liste anlegen
+  6. **Erledigt:** passiert automatisch beim Reifenwechsel
+  Filter nach Saison (z. B. im Herbst nur Winterreifen) und „nur im Lager“; die Platzseite zeigt, wo ein Satz gerade steht
+- **Startseite „Heute“:** Termine heute, wie viele Kunden anzurufen sind, was zu bestellen, zu liefern, vorzumontieren
+  ist, und überlagerte Sätze – jeweils mit einem Klick zur Liste
+- **Archiv:** „Platz freigeben“ löscht den Kunden nicht mehr, sondern legt ihn mit seinen Reifensätzen ins **Archiv**
+  (Menü Listen → Archiv). Kommt er wieder, findet ihn die Suche auf „+ Einlagern“ – mit „Zurückholen“ liegt er wieder
+  auf einem freien Platz
 - **Überlagerung:** Sätze, die länger als eine Frist (Standard 12 Monate) oder seit einem frei wählbaren Datum im Lager
   liegen, ohne gewechselt worden zu sein – mit Dauer, druckbar
 - **Benutzer & Rechte:** eigener Zugang für jeden Mitarbeiter mit Vorlagen **Administrator**, **Mitarbeiter**
   (einlagern, Reifenwechsel, Termine, Listen) und **Nur lesen** – oder einzelne Rechte frei anhaken
-  (Einlagern, Auslagern, Reifenwechsel, Termine, Listen, Verlauf, CSV-Export, Admin). Anmeldung über eine Anmeldeseite,
+  (Einlagern, Platz freigeben, Reifenwechsel, Termine, Listen, Verlauf, CSV-Export, Admin). Anmeldung über eine Anmeldeseite,
   auf Wunsch „angemeldet bleiben“ (30 Tage); jeder kann sein Passwort unter **Mein Konto** ändern
 - **Übersichtliche Menüleiste:** Lagerplan, Liste, Reifenwechsel, Termine, Aufklappmenüs **Listen** und **Admin**,
   **+ Einlagern**, Suche und Benutzermenü – jeder sieht nur, was er darf; auf dem Handy hinter dem Knopf ☰
@@ -171,6 +187,15 @@ sperren, ändern oder löschen; der letzte Administrator kann sich nicht selbst 
 **Ich habe mein Passwort vergessen.**
 Ein Administrator setzt es unter **Benutzer & Rechte** neu. Hat niemand mehr Zugang, im Programmfenster auf dem
 Server-PC ein Passwort für den **Hauptzugang** setzen – damit meldest du dich immer als Administrator an.
+
+**Ein Kunde holt seine Reifen ab und kommt nicht mehr – was tun?**
+Auf der Platzseite **„Platz freigeben (Archiv)“**. Der Platz ist dann frei, Kunde und Reifensätze liegen im **Archiv**
+und lassen sich jederzeit zurückholen. Endgültig löschen kann nur ein Administrator.
+
+**Wie läuft die Vorbereitung auf die neue Saison?**
+**Listen → Meldeliste / Saison**, Saison wählen (z. B. Winter) und die Reiter von links nach rechts abarbeiten:
+Anrufliste drucken und telefonieren, Bestellungen eintragen und mit der **Bestellliste** gesammelt bestellen, Lieferungen
+abhaken, vormontieren, Termine vereinbaren. Die Startseite zeigt unter **„Heute“**, was in jeder Stufe offen ist.
 
 **Wie mache ich einen Reifenwechsel?**
 Menüpunkt **Reifenwechsel** (oder der Knopf auf der Platzseite bzw. im Terminplaner): Kunde suchen, auf
