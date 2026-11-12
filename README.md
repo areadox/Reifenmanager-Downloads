@@ -99,6 +99,12 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
   5. **Termin vereinbaren:** Termin direkt aus der Liste anlegen
   6. **Erledigt:** passiert automatisch beim Reifenwechsel
   Filter nach Saison (z. B. im Herbst nur Winterreifen) und „nur im Lager“; die Platzseite zeigt, wo ein Satz gerade steht
+- **Saison-Prüfung** (Listen → Saison-Prüfung): zeigt in der laufenden Saison alle Reifensätze dieser Saison, die noch
+  im Lager liegen – der Kunde war also noch nicht zum Wechseln da (z. B. im Winter die Winterreifen). Kunden ohne
+  Termin stehen oben und werden ab einigen Wochen nach Saisonbeginn rot markiert; mit **„Termin anlegen“** geht es
+  direkt weiter. Saisonzeiten unter Admin (Standard: Winter ab 01.10., Sommer ab 01.04.). Die Liste hat ein **eigenes
+  Recht**, das du einzelnen Benutzern geben kannst
+- **Überlagerung** mit Filter nach Saison
 - **Startseite „Heute“:** Termine heute, wie viele Kunden anzurufen sind, was zu bestellen, zu liefern, vorzumontieren
   ist, und überlagerte Sätze – jeweils mit einem Klick zur Liste
 - **Archiv:** „Platz freigeben“ löscht den Kunden nicht mehr, sondern legt ihn mit seinen Reifensätzen ins **Archiv**
@@ -108,7 +114,7 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
   liegen, ohne gewechselt worden zu sein – mit Dauer, druckbar
 - **Benutzer & Rechte:** eigener Zugang für jeden Mitarbeiter mit Vorlagen **Administrator**, **Mitarbeiter**
   (einlagern, Reifenwechsel, Termine, Listen) und **Nur lesen** – oder einzelne Rechte frei anhaken
-  (Einlagern, Platz freigeben, Reifenwechsel, Termine, Listen, Verlauf, CSV-Export, Admin). Anmeldung über eine Anmeldeseite,
+  (Einlagern, Platz freigeben, Reifenwechsel, Termine, Listen, Saison-Prüfung, Verlauf, CSV-Export, Admin). Anmeldung über eine Anmeldeseite,
   auf Wunsch „angemeldet bleiben“ (30 Tage); jeder kann sein Passwort unter **Mein Konto** ändern
 - **Übersichtliche Menüleiste:** Lagerplan, Liste, Reifenwechsel, Termine, Aufklappmenüs **Listen** und **Admin**,
   **+ Einlagern**, Suche und Benutzermenü – jeder sieht nur, was er darf; auf dem Handy hinter dem Knopf ☰
