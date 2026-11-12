@@ -61,7 +61,9 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 - **Anzahl je Satz:** 1, 2, 3, 4 oder **2×2** (2 vorne + 2 hinten)
 - **Status je Satz:** im Lager oder am Fahrzeug – im Lagerplan auf einen Blick sichtbar: **grün** leer,
   **blau** Winterreifen, **gelb** Sommerreifen, **lila** Ganzjahresreifen, **rot** belegt mit unbekannter Reifenart,
-  **grau** alle Sätze gerade am Fahrzeug; liegen Sommer- und Winterreifen im Lager, ist die Kachel schräg geteilt.
+  **grau** alle Sätze gerade am Fahrzeug. Ein Lagerplatz fasst **einen Reifensatz (bis 4 Reifen)** – der andere Satz
+  ist am Fahrzeug; das Programm lässt nichts anderes zu. Eine schräg geteilte Kachel mit ⚠ zeigt ältere Daten mit zwei
+  Sätzen im Lager, die du mit einem Reifenwechsel berichtigst.
   Es kann immer nur **ein Satz am Fahrzeug** sein.
 - **Reifenwechsel:** Kunde, Kennzeichen oder Platz suchen, Satz wählen – der bisher montierte Satz wird automatisch
   als eingelagert geführt. Dabei fragt das Programm die **Profiltiefe des Satzes ab, der ins Lager kommt**,
@@ -99,6 +101,12 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
   5. **Termin vereinbaren:** Termin direkt aus der Liste anlegen
   6. **Erledigt:** passiert automatisch beim Reifenwechsel
   Filter nach Saison (z. B. im Herbst nur Winterreifen) und „nur im Lager“; die Platzseite zeigt, wo ein Satz gerade steht
+- **Reifenverschleiß** (Listen → Reifenverschleiß, eigenes Recht): aus den Profilmessungen bei jedem Reifenwechsel
+  berechnet das Programm, wie schnell die Reifen abfahren (mm je Saison, mit Kilometerstand auch je 1.000 km), wann die
+  Mindestprofiltiefe voraussichtlich erreicht ist und ob eine Achse oder Seite auffällig schneller abfährt (Hinweis auf
+  Spur/Fahrwerk). Dazu eine Auswertung **nach Reifenmodell** – welche Reifen halten bei deinen Kunden am längsten – und ein
+  kleiner Verlauf auf der Platzseite. Die Meldeliste hat den Reiter **„Nächste Saison fällig“**, damit du Kunden schon
+  ein Jahr vorher ansprechen kannst. Beim Reifenwechsel lässt sich dafür optional der **Kilometerstand** eintragen
 - **Saison-Prüfung** (Listen → Saison-Prüfung): zeigt in der laufenden Saison alle Reifensätze dieser Saison, die noch
   im Lager liegen – der Kunde war also noch nicht zum Wechseln da (z. B. im Winter die Winterreifen). Kunden ohne
   Termin stehen oben und werden ab einigen Wochen nach Saisonbeginn rot markiert; mit **„Termin anlegen“** geht es
@@ -109,12 +117,12 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
   ist, und überlagerte Sätze – jeweils mit einem Klick zur Liste
 - **Archiv:** „Platz freigeben“ löscht den Kunden nicht mehr, sondern legt ihn mit seinen Reifensätzen ins **Archiv**
   (Menü Listen → Archiv). Kommt er wieder, findet ihn die Suche auf „+ Einlagern“ – mit „Zurückholen“ liegt er wieder
-  auf einem freien Platz
+  auf einem freien Platz (bei zwei Sätzen wählst du, welcher ins Lager kommt)
 - **Überlagerung:** Sätze, die länger als eine Frist (Standard 12 Monate) oder seit einem frei wählbaren Datum im Lager
   liegen, ohne gewechselt worden zu sein – mit Dauer, druckbar
 - **Benutzer & Rechte:** eigener Zugang für jeden Mitarbeiter mit Vorlagen **Administrator**, **Mitarbeiter**
   (einlagern, Reifenwechsel, Termine, Listen) und **Nur lesen** – oder einzelne Rechte frei anhaken
-  (Einlagern, Platz freigeben, Reifenwechsel, Termine, Listen, Saison-Prüfung, Verlauf, CSV-Export, Admin). Anmeldung über eine Anmeldeseite,
+  (Einlagern, Platz freigeben, Reifenwechsel, Termine, Listen, Saison-Prüfung, Reifenverschleiß, Verlauf, CSV-Export, Admin). Anmeldung über eine Anmeldeseite,
   auf Wunsch „angemeldet bleiben“ (30 Tage); jeder kann sein Passwort unter **Mein Konto** ändern
 - **Übersichtliche Menüleiste:** Lagerplan, Liste, Reifenwechsel, Termine, Aufklappmenüs **Listen** und **Admin**,
   **+ Einlagern**, Suche und Benutzermenü – jeder sieht nur, was er darf; auf dem Handy hinter dem Knopf ☰
