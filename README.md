@@ -59,7 +59,9 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 - bis zu **zwei Reifensätze je Platz** (z. B. 4 Winter + 4 Sommer) mit Hersteller, Modell, Felge, **Profiltiefe je Reifen**
   und **Reifengröße/Index je Achse** – bei Mischbereifung (vorne andere Größe als hinten) einfach die Hinterachse ausfüllen
 - **Anzahl je Satz:** 1, 2, 3, 4 oder **2×2** (2 vorne + 2 hinten)
-- **Status je Satz:** im Lager oder am Fahrzeug – im Lagerplan auf einen Blick sichtbar (❄ Winter, ☀ Sommer).
+- **Status je Satz:** im Lager oder am Fahrzeug – im Lagerplan auf einen Blick sichtbar: **grün** leer,
+  **blau** Winterreifen, **gelb** Sommerreifen, **lila** Ganzjahresreifen, **rot** belegt mit unbekannter Reifenart,
+  **grau** alle Sätze gerade am Fahrzeug; liegen Sommer- und Winterreifen im Lager, ist die Kachel schräg geteilt.
   Es kann immer nur **ein Satz am Fahrzeug** sein.
 - **Reifenwechsel:** Kunde, Kennzeichen oder Platz suchen, Satz wählen – der bisher montierte Satz wird automatisch
   als eingelagert geführt. Dabei fragt das Programm die **Profiltiefe des Satzes ab, der ins Lager kommt**,
