@@ -10,19 +10,48 @@ Die aktuelle Version findest du unter **[Releases](../../releases/latest)** (rec
 Der Reifenmanager ist noch in Entwicklung, daher tragen die Versionen eine **0.x**-Nummer (z. B. 0.3.14).
 Wer noch die frühere Python-Version (2.x) oder eine Testversion 3.0.x installiert hat: einfach das aktuelle Setup
 installieren – die Daten werden übernommen; ab dann kommen Updates wieder automatisch.
-Dort liegen drei Dateien:
+Dort liegen diese Dateien:
 
 | Datei | Verwendung |
 |---|---|
 | `Reifenmanager-Setup-<Version>.exe` | **Windows, empfohlen.** Installer mit Startmenü-Eintrag, Deinstallation über die Windows-Einstellungen und Update-Funktion im Programm |
 | `Reifenmanager-portable.exe` | Windows: einzelne Datei ohne Installation (z. B. für einen USB-Stick) |
 | `Reifenmanager-linux-x86_64-<Version>.tar.gz` | **Linux** (64 Bit): Programmfenster und Server ohne Fenster, siehe [Linux](#linux) |
+| `install.sh` | **Linux-Server mit einem Befehl** einrichten, siehe [Linux-Server mit dem Install-Skript](#linux-server-mit-dem-install-skript) |
+| `reifenmanager-server-linux-x86_64`, `Dockerfile`, `start.sh`, `compose.yml` | werden vom Install-Skript bzw. für Docker verwendet |
 
 > **Hinweis zu Windows SmartScreen:** Die Programme sind nicht digital signiert. Beim ersten Start meldet Windows evtl.
 > „Der Computer wurde durch Windows geschützt". Klicke auf **Weitere Informationen → Trotzdem ausführen**.
 > Meldet Microsoft Defender einen Fund wie *Trojan:Win32/Bearfoos.A!ml*, siehe [Häufige Fragen](#häufige-fragen).
 
-## Linux
+## Linux-Server mit dem Install-Skript
+
+Für einen Server, eine VM (z. B. unter Proxmox), einen Mini-PC oder ein NAS mit Linux (64 Bit) – als root bzw. mit sudo:
+
+```
+curl -fsSL https://github.com/areadox/Reifenmanager-Downloads/releases/latest/download/install.sh | sudo sh
+```
+
+Das Skript lädt die neueste Version (mit Prüfsumme), legt den Systembenutzer und den Dienst `reifenmanager` an
+(startet automatisch beim Hochfahren), fragt nach einem **Admin-Benutzer** und zeigt die Adressen, unter denen die
+Weboberfläche erreichbar ist (Standard-Port **8080**). Programm: `/opt/reifenmanager`, Daten: `/var/lib/reifenmanager`.
+
+| Aufruf | Wirkung |
+|---|---|
+| `... \| sudo sh -s -- --port 8081` | anderen Port verwenden |
+| `... \| sudo sh -s -- --docker` | als Docker-Container statt als Dienst (Dateien und Daten in `/opt/reifenmanager-docker`) |
+| `... \| sudo sh -s -- --deinstallieren` | Dienst/Container und Programm entfernen – die **Daten bleiben erhalten** |
+| `... \| sudo sh` erneut | aktualisiert auf die neueste Version; Port und Einstellungen bleiben |
+
+- **Updates** danach bequem im Browser: **Admin → Update** (lädt, prüft und startet die neue Version automatisch).
+- **Admin-Passwort vergessen:** `sudo -u reifenmanager /opt/reifenmanager/reifenmanager-server --daten /var/lib/reifenmanager --admin-anlegen admin`
+- **Log:** `journalctl -u reifenmanager` · Firewall: `sudo ufw allow 8080/tcp`
+- **Zusammen mit der Fahrzeugakte:** Beide Programme können auf demselben Rechner/derselben VM laufen – Reifenmanager auf
+  Port 8080, Fahrzeugakte auf 8090. Sie haben getrennte Dienste, Benutzer und Datenordner.
+- **Docker von Hand:** `Dockerfile`, `start.sh` und `compose.yml` in einen Ordner legen und `docker compose up -d --build`;
+  Daten im Unterordner `daten`. In `compose.yml` lässt sich ein Passwort für den Hauptzugang setzen.
+
+## Linux (Paket mit Programmfenster)
 
 Das Paket `Reifenmanager-linux-x86_64-<Version>.tar.gz` entpacken (`tar xzf Reifenmanager-linux-x86_64-*.tar.gz`). Es enthält:
 
@@ -30,13 +59,14 @@ Das Paket `Reifenmanager-linux-x86_64-<Version>.tar.gz` entpacken (`tar xzf Reif
 |---|---|
 | `reifenmanager` | Programmfenster wie unter Windows – starten mit `./reifenmanager`. Benötigt eine grafische Oberfläche und ein aktuelles System (z. B. Ubuntu 22.04, Debian 12, Linux Mint 21 oder neuer) |
 | `reifenmanager-server` | ohne Fenster, für Server, NAS oder Mini-PC; läuft auf jedem 64-Bit-Linux: `./reifenmanager-server --port 8080 --passwort GEHEIM` (weitere Optionen mit `--help`) |
-| `reifenmanager.service` | Vorlage für einen systemd-Dienst, der den Server beim Hochfahren startet (Anleitung in der Datei) |
+| `reifenmanager.service` | Vorlage für einen systemd-Dienst von Hand (einfacher: [Install-Skript](#linux-server-mit-dem-install-skript)) |
 | `LIESMICH.txt` | Kurzanleitung |
 
 Die Daten liegen unter `~/.local/share/reifenmanager` (beim Server mit `--daten` wählbar) und sind mit der Windows-Version
 austauschbar – `reifenlager.db` und `lizenz.txt` einfach kopieren. Damit andere Geräte zugreifen können, den Port in der
-Firewall freigeben (z. B. `sudo ufw allow 8080/tcp`). Autostart und automatische Installation von Updates gibt es nur unter
-Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues Paket entpacken, Dateien ersetzen – die Daten bleiben).
+Firewall freigeben (z. B. `sudo ufw allow 8080/tcp`). Beim Programmfenster unter Linux öffnet „Jetzt aktualisieren" die
+Download-Seite (neues Paket entpacken, Dateien ersetzen – die Daten bleiben). Mit dem Install-Skript oder Docker
+installierte Server aktualisieren sich im Browser unter **Admin → Update**.
 
 ## Erste Schritte
 
@@ -143,7 +173,9 @@ Windows; unter Linux öffnet „Jetzt aktualisieren" die Download-Seite (neues P
 
 Das Programm sucht beim Start nach einer neuen Version und meldet sie im Fenster und in der Weboberfläche.
 Mit **„Jetzt aktualisieren"** wird der Installer geladen und die neue Version installiert; deine Daten bleiben erhalten.
-(Bei der portablen Version und unter Linux öffnet der Knopf diese Download-Seite.)
+(Bei der portablen Version und beim Linux-Programmfenster öffnet der Knopf diese Download-Seite.)
+Linux-Server, die mit dem Install-Skript oder Docker eingerichtet sind, aktualisiert ein Administrator im Browser unter
+**Admin → Update**.
 
 ## Häufige Fragen
 
