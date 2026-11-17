@@ -79,7 +79,7 @@ installierte Server aktualisieren sich im Browser unter **Admin → Update**.
    Der Zugriff ist unverschlüsselt (HTTP) – bitte nur im internen Netz verwenden.
 4. Beim ersten Start fragt die Windows-Firewall, ob der Zugriff im **privaten Netzwerk** erlaubt sein soll – bitte erlauben,
    sonst erreichen andere Geräte die Seite nicht.
-5. Unter **Admin** trägst du die Kopfzeile deiner Firma ein und legst unter **Lagerorte** fest, welche Plätze es gibt
+5. Unter **Admin → Einstellungen** trägst du die Kopfzeile deiner Firma ein und legst unter **Lagerorte** fest, welche Plätze es gibt
    (z. B. Platz 1–50 = „Halle A, Regal 1").
 6. Mit **+ Einlagern** erfasst du den ersten Kunden.
 
@@ -156,7 +156,9 @@ installierte Server aktualisieren sich im Browser unter **Admin → Update**.
   auf Wunsch „angemeldet bleiben“ (30 Tage); jeder kann sein Passwort unter **Mein Konto** ändern
 - **Übersichtliche Menüleiste:** Lagerplan, Liste, Reifenwechsel, Termine, Aufklappmenüs **Listen** und **Admin**,
   **+ Einlagern**, Suche und Benutzermenü – jeder sieht nur, was er darf; auf dem Handy hinter dem Knopf ☰
-- **Admin:** Kopfzeile, Mindestprofiltiefen, Frist für die Überlagerung sowie Lagerorte, Lizenz, Verlauf und CSV-Export
+- **Admin → Einstellungen:** Kopfzeile, Mindestprofiltiefen, Frist für die Überlagerung, Saisonbeginn (Winter/Sommer) und
+  ab wann die Saison-Prüfung rot markiert – jeweils mit Standardwert und Knopf **„Standardwerte“**; dazu Update (Linux-Server),
+  Lagerorte, Lizenz, Verlauf und CSV-Export
 - **Änderungsverlauf** (was wann **von wem** geändert wurde, filterbar nach Benutzer) und **tägliche automatische Sicherung**
 - Update-Hinweis im Programm mit Installation per Klick
 
