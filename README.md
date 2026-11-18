@@ -111,8 +111,8 @@ installierte Server aktualisieren sich im Browser unter **Admin → Update**.
   Waschen und Wuchten mit Kästchen zum Abhaken. Die **Tagesliste** ist nach Uhrzeit sortiert und enthält alle Termine;
   die **Holliste** ist nach Lagerplatz sortiert und enthält nur Kunden mit eingelagerten Reifen – zum Holen in einem Gang.
 - Lagerplan, Liste und Suche (Kunde, Kennzeichen, Dimension, Lagerort …), CSV-Export für Excel
-- **CSV-Import** im Programmfenster: Datei hineinziehen, Spalten werden automatisch erkannt – CSV-Export zurückspielen
-  oder Kunden aus dem DMS bzw. einer Excel-Tabelle übernehmen
+- **CSV-Import** im Programmfenster oder im Browser unter **Admin → CSV-Import** (auch beim Linux-Server): Spalten werden
+  automatisch erkannt – CSV-Export zurückspielen oder Kunden aus dem DMS bzw. einer Excel-Tabelle übernehmen
 - **Einlagerungsbescheid** zum Drucken mit eigener Firmen-Kopfzeile – es kommen immer **zwei Exemplare** heraus,
   eins für den Kunden und eins für den Betrieb (oben rechts gekennzeichnet)
 - **+ Einlagern** mit Suche nach bestehenden Sätzen (Platznummer, Kennzeichen oder Kunde) – mit Knöpfen zum Öffnen,
@@ -200,12 +200,17 @@ Datenordner (mindestens `reifenlager.db`) auf den neuen Rechner kopieren, Progra
 Die Lizenz (`lizenz.txt`) liegt im selben Ordner.
 
 **Wie importiere ich Daten aus einer CSV-Datei?**
-Im Programmfenster unter **CSV-Import** die Datei mit **„Durchsuchen …"** wählen oder einfach ins Fenster ziehen
+**Im Browser** (von jedem PC, auch beim Linux-Server ohne Fenster; nur für Administratoren): **Admin → CSV-Import**,
+Datei wählen (bis 8 MB) und **„Datei prüfen"**. Es folgen Vorschau, Prüfergebnis und die Zuordnung der Spalten; nach einer
+Änderung der Zuordnung **„Neu prüfen"**, dann **„… Plätze importieren"**. Ablauf, Erkennung und Sicherung wie unten beim
+Programmfenster; im Verlauf steht der Import unter dem Namen des angemeldeten Benutzers.
+
+**Im Programmfenster** unter **CSV-Import** die Datei mit **„Durchsuchen …"** wählen oder einfach ins Fenster ziehen
 (alternativ `Reifenmanager.exe --import datei.csv`). Das Programm liest sie sofort ein:
 
 - Zeichensatz (UTF-8 oder Windows/ANSI) und Trennzeichen (Semikolon, Komma, Tabulator) werden erkannt; die erste Zeile
   muss die Spaltenüberschriften enthalten.
-- Die Spalten werden **automatisch zugeordnet** (z. B. *Lagerplatz* → Platz, *Name* → Kunde, *Reifengröße* → Dimension,
+- Die Spalten werden **automatisch zugeordnet** (z. B. *Lagerplatz* → Platz, *Name* → Kunde, *Kennz.* → Kennzeichen, *Reifengröße* → Dimension,
   *Reifengröße hinten* / *Index hinten* → Hinterachse, Anzahl auch als „2x2",
   *Marke* → Hersteller). Unter **„Zuordnung der Spalten"** lässt sich das ändern; fehlt Platz oder Kunde, klappt sie von selbst auf.
 - Eine **Vorschau** zeigt die ersten Zeilen, darunter steht, wie viele Plätze neu angelegt werden und welche Zeilen Fehler
